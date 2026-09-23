@@ -55,19 +55,6 @@
 
 ---
 
-## ⌨️ Developer Terminal (Easter Egg)
-
-Sortify includes a hidden developer terminal with live typing animation effects:
-
-- **Desktop & Laptop**:
-  - Open terminal: `Shift + S`
-  - Close terminal: `Shift + D` (or `Esc`)
-- **Mobile & Tablet**:
-  - Touch and hold the **Sortify** brand logo in the top bar for **3 seconds** to open.
-  - Tap the exit icon (`✕`) or tap anywhere outside the modal to close.
-
----
-
 ## 🛠️ Tech Stack
 
 - **Core**: [React 19](https://react.dev/), [TypeScript 7](https://www.typescriptlang.org/)
@@ -78,36 +65,6 @@ Sortify includes a hidden developer terminal with live typing animation effects:
 
 ---
 
-## 🏁 Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (version `18.0.0` or higher)
-- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/sortify.git
-   cd sortify
-Install dependencies:
-code
-Bash
-npm install
-Start the development server:
-code
-Bash
-npm run dev
-Open http://localhost:3000 in your browser.
-Build for production:
-code
-Bash
-npm run build
-Preview production build:
-code
-Bash
-npm run preview
 📁 Project Structure
 code
 Text
@@ -139,16 +96,5 @@ sortify/
 ├── tsconfig.json
 ├── vite.config.ts
 └── README.md
-🤝 Contributing
-Contributions are always welcome! If you have suggestions for new sorting algorithms (e.g., Radix Sort, Tim Sort) or educational visualizations:
-Fork the Project
-Create your Feature Branch (git checkout -b feature/AlgorithmName)
-Commit your Changes (git commit -m 'Add AlgorithmName visualizer')
-Push to the Branch (git push origin feature/AlgorithmName)
-Open a Pull Request
-📄 License
-Distributed under the MIT License. See LICENSE for more information.
-<div align="center">
-<sub>Developed by <strong>Subhajit Datta</strong> • Built with ❤️ for computer science learners worldwide</sub>
 </div>
 ```
