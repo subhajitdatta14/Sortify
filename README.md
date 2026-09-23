@@ -1,4 +1,4 @@
-# ⚡ Sorti<span style="color:#8B5CF6">fy</span>
+# 🤖 Sorti<span style="color:#8B5CF6">fy</span>
 
 <div align="center">
 
@@ -14,7 +14,7 @@
   Master algorithmic thinking with step-by-step visualizations, synced pseudocode execution, interactive practice tests, and exam cheat sheets.
 </p>
 
-[Explore Visualizer](#-features) • [Quick Start](#-getting-started) • [Algorithms](#-algorithms-included) • [Terminal Easter Egg](#-developer-terminal) • [Tech Stack](#-tech-stack)
+[Explore Visualizer](#-features) • [Quick Start](#-getting-started) • [Tech Stack](#-tech-stack)
 
 </div>
 
@@ -39,19 +39,6 @@
 - **📚 Comprehensive CS Cheat Sheet**: Complete breakdown of Big-O time (Best, Average, Worst), space complexity, stability, in-place classification, and production-grade Python implementations.
 - **📱 100% Responsive & Device-Adaptive**: Custom-engineered layout with fluid typography and touch inertia, running smoothly across smartphones, tablets, laptops, and ultra-wide displays.
 - **💻 Developer Terminal Easter Egg**: Integrated terminal modal featuring retro typing animations and credit logs.
-
----
-
-## 🚀 Algorithms Included
-
-| Algorithm | Best Time | Average Time | Worst Time | Space | Stable? | Method |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Bubble Sort** | $\Omega(n)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ | ✅ Yes | Exchanging |
-| **Selection Sort** | $\Omega(n^2)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ | ❌ No | Selection |
-| **Insertion Sort** | $\Omega(n)$ | $\Theta(n^2)$ | $O(n^2)$ | $O(1)$ | ✅ Yes | Insertion |
-| **Merge Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n \log n)$ | $O(n)$ | ✅ Yes | Divide & Conquer |
-| **Quick Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n^2)$ | $O(\log n)$ | ❌ No | Partitioning |
-| **Heap Sort** | $\Omega(n \log n)$ | $\Theta(n \log n)$ | $O(n \log n)$ | $O(1)$ | ❌ No | Selection (Heap) |
 
 ---
 
