@@ -1,0 +1,7 @@
+{
+  "name": "Sortify",
+  "description": "Classic sorting algorithms, made visual. An interactive educational sorting visualizer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,0 +1,160 @@
+import { AlgorithmDefinition } from '../types';
+
+export const ALGORITHMS: Record<string, AlgorithmDefinition> = {
+  bubble: {
+    id: 'bubble',
+    name: 'Bubble Sort',
+    description:
+      'Repeatedly swaps adjacent out-of-order pairs, letting larger values bubble toward the end.',
+    complexity: {
+      best: 'O(n)',
+      average: 'O(n²)',
+      worst: 'O(n²)',
+      space: 'O(1)',
+      stable: true,
+    },
+    pseudocode: [
+      { line: 1, text: 'def bubble_sort(a):', indent: 0 },
+      { line: 2, text: '    n = len(a)', indent: 1 },
+      { line: 3, text: '    for p in range(n - 1):', indent: 1 },
+      { line: 4, text: '        swapped = False', indent: 2 },
+      { line: 5, text: '        for i in range(n - 1 - p):', indent: 2 },
+      { line: 6, text: '            if a[i] > a[i + 1]:', indent: 3 },
+      { line: 7, text: '                a[i], a[i + 1] = a[i + 1], a[i]', indent: 4 },
+      { line: 8, text: '                swapped = True', indent: 4 },
+      { line: 9, text: '        if not swapped:', indent: 2 },
+      { line: 10, text: '            break', indent: 3 },
+    ],
+  },
+  selection: {
+    id: 'selection',
+    name: 'Selection Sort',
+    description:
+      'Scans for the smallest remaining value and swaps it into the next position.',
+    complexity: {
+      best: 'O(n²)',
+      average: 'O(n²)',
+      worst: 'O(n²)',
+      space: 'O(1)',
+      stable: false,
+    },
+    pseudocode: [
+      { line: 1, text: 'def selection_sort(a):', indent: 0 },
+      { line: 2, text: '    n = len(a)', indent: 1 },
+      { line: 3, text: '    for i in range(n - 1):', indent: 1 },
+      { line: 4, text: '        min_idx = i', indent: 2 },
+      { line: 5, text: '        for j in range(i + 1, n):', indent: 2 },
+      { line: 6, text: '            if a[j] < a[min_idx]:', indent: 3 },
+      { line: 7, text: '                min_idx = j', indent: 4 },
+      { line: 8, text: '        if min_idx != i:', indent: 2 },
+      { line: 9, text: '            a[i], a[min_idx] = a[min_idx], a[i]', indent: 3 },
+    ],
+  },
+  insertion: {
+    id: 'insertion',
+    name: 'Insertion Sort',
+    description:
+      'Builds a sorted prefix by inserting each new value into the right place.',
+    complexity: {
+      best: 'O(n)',
+      average: 'O(n²)',
+      worst: 'O(n²)',
+      space: 'O(1)',
+      stable: true,
+    },
+    pseudocode: [
+      { line: 1, text: 'def insertion_sort(a):', indent: 0 },
+      { line: 2, text: '    n = len(a)', indent: 1 },
+      { line: 3, text: '    for i in range(1, n):', indent: 1 },
+      { line: 4, text: '        key = a[i]', indent: 2 },
+      { line: 5, text: '        j = i - 1', indent: 2 },
+      { line: 6, text: '        while j >= 0 and a[j] > key:', indent: 2 },
+      { line: 7, text: '            a[j + 1] = a[j]', indent: 3 },
+      { line: 8, text: '            j -= 1', indent: 3 },
+      { line: 9, text: '        a[j + 1] = key', indent: 2 },
+    ],
+  },
+  merge: {
+    id: 'merge',
+    name: 'Merge Sort',
+    description:
+      'Splits the list in half, sorts each half, then merges them back in order.',
+    complexity: {
+      best: 'O(n log n)',
+      average: 'O(n log n)',
+      worst: 'O(n log n)',
+      space: 'O(n)',
+      stable: true,
+    },
+    pseudocode: [
+      { line: 1, text: 'def merge_sort(a, left, right):', indent: 0 },
+      { line: 2, text: '    if left < right:', indent: 1 },
+      { line: 3, text: '        mid = (left + right) // 2', indent: 2 },
+      { line: 4, text: '        merge_sort(a, left, mid)', indent: 2 },
+      { line: 5, text: '        merge_sort(a, mid + 1, right)', indent: 2 },
+      { line: 6, text: '        merge(a, left, mid, right)', indent: 2 },
+      { line: 7, text: '', indent: 0 },
+      { line: 8, text: 'def merge(a, l, m, r):', indent: 0 },
+      { line: 9, text: '    # combine sorted halves into a[l..r]', indent: 1 },
+      { line: 10, text: '    # write elements sequentially', indent: 1 },
+    ],
+  },
+  quick: {
+    id: 'quick',
+    name: 'Quick Sort',
+    description:
+      'Partitions around a pivot so smaller values go left and larger values go right.',
+    complexity: {
+      best: 'O(n log n)',
+      average: 'O(n log n)',
+      worst: 'O(n²)',
+      space: 'O(log n)',
+      stable: false,
+    },
+    pseudocode: [
+      { line: 1, text: 'def quick_sort(a, low, high):', indent: 0 },
+      { line: 2, text: '    if low < high:', indent: 1 },
+      { line: 3, text: '        p = partition(a, low, high)', indent: 2 },
+      { line: 4, text: '        quick_sort(a, low, p - 1)', indent: 2 },
+      { line: 5, text: '        quick_sort(a, p + 1, high)', indent: 2 },
+      { line: 6, text: '', indent: 0 },
+      { line: 7, text: 'def partition(a, low, high):', indent: 0 },
+      { line: 8, text: '    pivot = a[high]', indent: 1 },
+      { line: 9, text: '    # swap smaller elements left of pivot', indent: 1 },
+      { line: 10, text: '    return final_pivot_index', indent: 1 },
+    ],
+  },
+  heap: {
+    id: 'heap',
+    name: 'Heap Sort',
+    description:
+      'Builds a max-heap, then repeatedly moves the largest value to the end.',
+    complexity: {
+      best: 'O(n log n)',
+      average: 'O(n log n)',
+      worst: 'O(n log n)',
+      space: 'O(1)',
+      stable: false,
+    },
+    pseudocode: [
+      { line: 1, text: 'def heap_sort(a):', indent: 0 },
+      { line: 2, text: '    n = len(a)', indent: 1 },
+      { line: 3, text: '    # build max heap', indent: 1 },
+      { line: 4, text: '    for i in range(n // 2 - 1, -1, -1):', indent: 1 },
+      { line: 5, text: '        heapify(a, n, i)', indent: 2 },
+      { line: 6, text: '    # extract elements one by one', indent: 1 },
+      { line: 7, text: '    for i in range(n - 1, 0, -1):', indent: 1 },
+      { line: 8, text: '        a[0], a[i] = a[i], a[0]', indent: 2 },
+      { line: 9, text: '        heapify(a, i, 0)', indent: 2 },
+    ],
+  },
+};
+
+export const ALGORITHM_ORDER: AlgorithmDefinition[] = [
+  ALGORITHMS.bubble,
+  ALGORITHMS.selection,
+  ALGORITHMS.insertion,
+  ALGORITHMS.merge,
+  ALGORITHMS.quick,
+  ALGORITHMS.heap,
+];
